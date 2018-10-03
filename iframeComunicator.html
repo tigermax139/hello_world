@@ -26,12 +26,14 @@
 
     function receiveMessage(event) {
       if (event && event.data) {
+        console.log('EVT', event);
         callParentFunction(event.data);
       }
     }
 
     if (window.addEventListener) {
       window.addEventListener("message", receiveMessage, false);
+      
     } else if (window.attachEvent) {
       window.attachEvent("onmessage", receiveMessage);
     }

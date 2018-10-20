@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+<script type="text/javascript">
+    const wrapper = document.getElementById('app');
+    const deviceOrientationHandler = evt => {
+        const { alpha, beta, gamma } = evt;
+        const evtArr = [alpha, beta, gamma];
+        wrapper.innerHTML = evtArr.map(item => `<p>${item}</p>` ).join('');
+    };
+    window.addEventListener('deviceorientation', deviceOrientationHandler);
+</script>
+</html>

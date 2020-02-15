@@ -1,0 +1,14 @@
+#front-page-recent-posts .more-recent-posts {
+	font-size: 0
+}
+
+#front-page-recent-posts .more-recent-posts:hover {
+	text-decoration: none;
+}
+
+#front-page-recent-posts .more-recent-posts::before {
+	content: "Більше новин";
+	font-size: 12px;
+	font-weight: 600;
+	padding-left: 26px;
+}
